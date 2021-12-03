@@ -58,5 +58,27 @@ export class AppComponent {
     const per2= {surname:'Anrrango' ,...per1};
     console.log(per2)
 
+    const per3= {
+      name: 'Dario',
+    age: 29,
+    phone: 989,
+    extra: 345
+  };
+
+  const {phone:tel}= per3;
+  console.log(tel);
+
+  const a = {1:"a",2:"a",3:"a",4:"a",5:"a",6:"a"};
+const b= Object.keys(a).map(n => parseInt(n)).reduce((acc,value)=>{
+  if(value%2===0)
+  acc+=value;
+  return acc
+},0);
+console.log(b);
+
+const arr=[2,4,5,6,7];
+const conv=arr.filter(n=>n%2 !=0).join(',')
+console.log(conv)
+
   }
 }
